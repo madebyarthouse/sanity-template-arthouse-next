@@ -1,4 +1,4 @@
-# Next.js boilerplate made by Arthouse
+# 🔥 Next.js boilerplate made by Arthouse
 
 **Features:**
 - Focus on DX
@@ -9,6 +9,8 @@
     - SEO metadata
     - JSON-LD
     - Open Graph 
+- i18n w/ next-translate + language-switcher component
+- Themable 
 - Husky for Git Hooks (pre-commit lint)
 - Yarn
 - One-click deploy to Netlify and Vercel
