@@ -6,6 +6,10 @@
 - Next.js w/ Typescript
 - Tailwind
 - ESLint + Prettier
+- Configured VSCode
+
+Todo:
+
 - Configured Next SEO https://github.com/garmeeh/next-seo
   - SEO metadata
   - JSON-LD
@@ -15,7 +19,6 @@
 - Husky for Git Hooks (pre-commit lint)
 - Yarn
 - One-click deploy to Netlify and Vercel
-- Configured VSCode
 
 ## Getting started
 
