@@ -29,6 +29,10 @@ yarn dev
 
 - Explain .tsconfig.json (Path aliases), next.config.js
 
+# Tailwind
+
+CSS Reset
+
 ## ESLint + Prettier
 
 - Explain .eslintrc.json, .eslintignore, .prettierrc.json, .prettierignore
