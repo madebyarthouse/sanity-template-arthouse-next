@@ -25,6 +25,10 @@ Local dev
 yarn dev
 ```
 
+## Next.js w/ Typescript
+
+- Explain .tsconfig.json (Path aliases), next.config.js
+
 ## ESLint + Prettier
 
 - Explain .eslintrc.json, .eslintignore, .prettierrc.json, .prettierignore
