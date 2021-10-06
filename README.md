@@ -27,7 +27,8 @@ yarn dev
 
 ## ESLint + Prettier
 
-VSCode
+- Explain .eslintrc.json, .eslintignore, .prettierrc.json, .prettierignore
+- VSCode config
 
 ## Configured VSCode
 

@@ -7,10 +7,12 @@
     "plugin:react/recommended",
     "airbnb",
     "airbnb-typescript",
-    "prettier"
+    "prettier",
+    "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": ["./tsconfig.json"],
     "ecmaFeatures": {
       "jsx": true
     },
@@ -18,5 +20,8 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off"
+  }
 }

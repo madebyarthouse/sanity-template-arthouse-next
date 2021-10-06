@@ -1,3 +1,5 @@
 .next
+.husky
+.vscode
 dist
 node_modules/
