@@ -7,6 +7,7 @@
 - Tailwind
 - ESLint + Prettier
 - Configured VSCode
+- Pre-Commit linter via Husky
 
 Todo:
 
@@ -16,7 +17,7 @@ Todo:
   - Open Graph
 - i18n w/ next-translate + language-switcher component
 - Themable
-- Husky for Git Hooks (pre-commit lint)
+
 - Yarn
 - One-click deploy to Netlify and Vercel
 
