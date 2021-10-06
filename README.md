@@ -8,6 +8,7 @@
 - ESLint + Prettier
 - Configured VSCode
 - Pre-Commit linter via Husky
+- Yarn
 
 Todo:
 
@@ -17,9 +18,11 @@ Todo:
   - Open Graph
 - i18n w/ next-translate + language-switcher component
 - Themable
-
-- Yarn
 - One-click deploy to Netlify and Vercel
+
+Maybe:
+
+- Preact Option
 
 ## Getting started
 
