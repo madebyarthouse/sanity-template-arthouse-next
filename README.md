@@ -1,4 +1,4 @@
-# 🔥 Next.js boilerplate made by Arthouse
+# 🔥 Next.js boilerplate made by Arthouse 
 
 **Features:**
 - Focus on DX
@@ -14,6 +14,7 @@
 - Husky for Git Hooks (pre-commit lint)
 - Yarn
 - One-click deploy to Netlify and Vercel
+- VSCode 
 
 ## Getting started
 
@@ -21,6 +22,9 @@ Local dev
 ```
 yarn dev
 ```
+
+## ESLint + Prettier
+VSCode
 
 ## License
 Licensed under the MIT License, Copyright © 2021
