@@ -12,6 +12,7 @@
 
 Todo:
 
+- Bundle Analyzer
 - Configured Next SEO https://github.com/garmeeh/next-seo
   - SEO metadata
   - JSON-LD
