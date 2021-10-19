@@ -43,7 +43,7 @@
     "typescript": "4.4.3"
   },
   "nextBundleAnalysis": {
-    "budget": null,
+    "budget": 350,
     "budgetPercentIncreaseRed": 20,
     "showDetails": true
   }
