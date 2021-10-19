@@ -10,7 +10,7 @@ on:
 defaults:
   run:
     # change this if your nextjs app does not live at the root of the repo
-    working-directory: ./web
+    working-directory: web
 
 jobs:
   analyze:
@@ -25,6 +25,8 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        with:
+          working-directory: web
 
       - name: Restore next build
         uses: actions/cache@v2
