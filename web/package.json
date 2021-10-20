@@ -18,6 +18,7 @@
   "dependencies": {
     "@next/bundle-analyzer": "^11.1.2",
     "next": "11.1.2",
+    "next-sanity": "^0.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -38,7 +39,8 @@
     "husky": "^7.0.0",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
-    "prettier": "2.4.1",
+    "prettier": "^2.4.1",
+    "sanity-codegen": "^0.9.6",
     "tailwindcss": "^2.2.16",
     "typescript": "4.4.3"
   },

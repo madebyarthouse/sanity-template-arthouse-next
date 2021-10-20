@@ -25,7 +25,7 @@
                 "buildSettings": {
                     "base": "studio-path",
                     "dir": "dist",
-                    "cmd": "npm run build"
+                    "cmd": "yarn build"
                 }
             },
             {
@@ -37,7 +37,7 @@
                 "buildSettings": {
                     "base": "site-directory",
                     "dir": "./directory-to-deploy",
-                    "cmd": "npm run build"
+                    "cmd": "yarn build"
                 },
                 "previewMedia": {
                     "type": "image",

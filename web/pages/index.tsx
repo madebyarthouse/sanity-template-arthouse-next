@@ -1,15 +1,32 @@
-import type { NextPage } from 'next';
+import type { NextPage, GetStaticProps } from 'next';
+import type { Page } from 'lib/sanitySchema';
+import { getClient } from 'lib/sanity.server';
 
-const Home: NextPage = () => (
-  <div>
-    Change in Bundle size 123455 Lorem ipsum dolor sit amet consectetur
-    adipisicing elit. Provident molestias vel dignissimos voluptatem, culpa
-    voluptate soluta magnam consequatur veritatis! Qui earum veniam id
-    repellendus nostrum itaque saepe nesciunt optio provident? Lorem ipsum dolor
-    sit amet, consectetur adipisicing elit. Veniam magnam labore assumenda,
-    eligendi, quisquam suscipit nesciunt voluptates maiores, quae in sit cum
-    rerum aspernatur quia amet soluta deserunt. Asperiores, amet!
-  </div>
-);
+type Props = {
+  pages: Page[];
+};
+
+const Home: NextPage<Props> = ({ pages }) => {
+  console.log(pages);
+  return (
+    <ul>
+      {pages.map((page: Page) => (
+        <li key={page._id}>
+          {page.title} – {page._id}{' '}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const pages: Page[] = await getClient(false).fetch(`*[_type == 'page']`);
+
+  return {
+    props: {
+      pages,
+    },
+  };
+};
 
 export default Home;
