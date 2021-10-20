@@ -1,0 +1,50 @@
+{
+  "name": "arthouse-next",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "ANALYZE=true yarn build",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test-all": "yarn check-format && yarn check-lint && yarn check-types && yarn build",
+    "lint": "next lint",
+    "prepare": "cd .. && husky install"
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^11.1.2",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.27",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "autoprefixer": "^10.3.7",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.0",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "prettier": "2.4.1",
+    "tailwindcss": "^2.2.16",
+    "typescript": "4.4.3"
+  },
+  "nextBundleAnalysis": {
+    "budget": null,
+    "budgetPercentIncreaseRed": 20,
+    "showDetails": true
+  }
+}
