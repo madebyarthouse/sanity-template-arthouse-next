@@ -1,0 +1,50 @@
+{
+    "version": 2,
+    "title": "A Descriptive Title for your Starter",
+    "description": "A short description for your starter (maybe a couple sentences)",
+    "previewMedia": {
+        "type": "image",
+        "src": "assets/path-to-preview-image.png",
+        "alt": "Alt text here"
+    },
+
+    "deployment": {
+        "provider": "netlify",
+        "sites": [
+            {
+                "id": "studio",
+                "type": "studio",
+                "title": "Sanity Studio",
+                "description": "The Sanity Studio is where you edit and structure your content.",
+                "dir": "./studio-path",
+                "previewMedia": {
+                    "type": "image",
+                    "src": "assets/path-to-image.png",
+                    "alt": "Alt text here"
+                },
+                "buildSettings": {
+                    "base": "studio-path",
+                    "dir": "dist",
+                    "cmd": "npm run build"
+                }
+            },
+            {
+                "id": "site",
+                "type": "web",
+                "title": "Title for the project",
+                "description": "Description for the project",
+                "dir": "./site-directory",
+                "buildSettings": {
+                    "base": "site-directory",
+                    "dir": "./directory-to-deploy",
+                    "cmd": "npm run build"
+                },
+                "previewMedia": {
+                    "type": "image",
+                    "src": "assets/path-to-image.png",
+                    "alt": "Alt text here"
+                }
+            }
+        ]
+    }
+}
