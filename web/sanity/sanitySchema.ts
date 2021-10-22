@@ -52,4 +52,34 @@ export interface Page extends SanityDocument {
   title: string;
 }
 
-export type Documents = Page;
+/**
+ * Site config
+ *
+ *
+ */
+export interface SiteConfig extends SanityDocument {
+  _type: 'siteConfig';
+
+  /**
+   * Title — `string`
+   *
+   *
+   */
+  title: string;
+
+  /**
+   * Description — `string`
+   *
+   *
+   */
+  description: string;
+
+  /**
+   * Keywords — `array`
+   *
+   *
+   */
+  keywords?: Array<SanityKeyed<string>>;
+}
+
+export type Documents = Page | SiteConfig;

@@ -24,6 +24,7 @@
     // suppress errors for missing 'import React' in files
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "arrow-body-style": "off"
   }
 }
