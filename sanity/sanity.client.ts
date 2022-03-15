@@ -1,4 +1,3 @@
-// lib/sanity.server.js
 import { createClient } from 'next-sanity';
 import config from './sanityConfig';
 

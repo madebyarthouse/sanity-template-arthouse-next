@@ -36,9 +36,4 @@ export const PortableText = (
   <PortableTextComponent components={{}} {...props} />;
 };
 
-// export const PortableText = createPortableTextComponent({
-//   ...config,
-//   serializers: {},
-// });
-
 export const useCurrentUser = createCurrentUserHook(config);
