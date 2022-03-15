@@ -4,11 +4,10 @@
 
 - Focus on DX
 - Next.js w/ Typescript
-- Tailwind
+- Tailwind w/ Prettier class name sorter 
 - ESLint + Prettier
 - Configured VSCode
 - Pre-Commit linter via Husky
-- Yarn
 
 Todo:
 
