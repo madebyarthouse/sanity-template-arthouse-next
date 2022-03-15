@@ -1,11 +1,11 @@
 {
-  "name": "sanitytemplatearthousenext",
+  "name": "sanity_template_arthouse_next",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Mäx <praxis.max@gmail.com>",
-  "license": "UNLICENSED",
+  "author": "Christian Cito <christian.cito@arthouse.is> & Max Hoffmann <max.hoffmann@arthouse.is>",
+  "license": "MIT",
   "scripts": {
     "start": "sanity start",
     "build": "sanity build"

@@ -13,12 +13,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"],
-      "@sanity/*": ["sanity/*"]
-    }
+    "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",
@@ -28,5 +23,5 @@
     "tailwind.config.js",
     "postcss.config.js"
   ],
-  "exclude": ["node_modules", ".eslintrc.json"]
+  "exclude": ["node_modules", ".eslintrc.json", "studio/schemas/schema.js"]
 }

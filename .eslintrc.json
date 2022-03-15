@@ -33,6 +33,8 @@
     "arrow-body-style": "off",
     "no-restricted-syntax": "off",
     "default-case": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "import/no-anonymous-default-export": "off",
+    "import/no-unresolved": [2, { "ignore": ["^(all|part):"] }]
   }
 }
