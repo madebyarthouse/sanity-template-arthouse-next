@@ -6,18 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "analyze": "ANALYZE=true yarn build",
+    "analyze": "ANALYZE=true npm run build",
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
-    "test-all": "yarn check-format && yarn check-lint && yarn check-types && yarn build",
+    "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
     "lint": "next lint",
     "prepare": "cd .. && husky install"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^11.1.2",
-    "next": "11.1.2",
+    "next": "^12.1",
     "next-seo": "^4.28.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -39,8 +39,9 @@
     "husky": "^7.0.0",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
-    "prettier": "2.4.1",
-    "tailwindcss": "^2.2.16",
+    "prettier": "^2.4.1",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "tailwindcss": "^3",
     "typescript": "4.4.3"
   },
   "nextBundleAnalysis": {
