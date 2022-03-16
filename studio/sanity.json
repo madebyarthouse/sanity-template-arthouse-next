@@ -4,7 +4,7 @@
     "name": "sanity-template-arthouse-next"
   },
   "api": {
-    "projectId": "mt6b7442",
+    "projectId": "m6m0o2t3",
     "dataset": "production"
   },
   "plugins": [
@@ -24,7 +24,11 @@
   "parts": [
     {
       "name": "part:@sanity/base/schema",
-      "path": "./schemas/schema.ts"
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
     }
   ]
 }

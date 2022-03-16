@@ -1,13 +1,12 @@
+import {
+  MetaConfigType,
+  SanityComplexImageType,
+  GlobalMetaConfigType,
+  SanitySimpleImageType,
+} from 'sanity/queries';
 import { NextSeo } from 'next-seo';
 import { OpenGraphMedia } from 'next-seo/lib/types';
 import useTranslation from 'next-translate/useTranslation';
-
-import {
-  GlobalMetaConfigType,
-  Localized,
-  MetaConfigType,
-  SanityComplexImageType,
-} from 'sanity/queries';
 import { urlFor } from 'sanity/sanity';
 
 const buildOpenGraphImages = (
@@ -24,46 +23,62 @@ const buildOpenGraphImages = (
   });
 };
 
-const MetaConfig = ({
+type PageMetaType = {
+  metaTitle?: string;
+  metaDescription?: string;
+  shareTitle?: string;
+  shareDescription?: string;
+  shareGraphics: SanityComplexImageType[];
+  twitterCardType: 'summary' | 'summary_large_image' | 'app' | 'player';
+};
+
+type SiteMetaType = {
+  meta?: PageMetaType;
+  siteName?: string;
+  favicon?: SanitySimpleImageType;
+  siteUrl?: string;
+  titleTemplate?: string;
+};
+const Meta = ({
   siteConfig,
   pageConfig,
 }: {
-  siteConfig?: GlobalMetaConfigType;
-  pageConfig?: Localized<MetaConfigType>;
+  siteConfig?: SiteMetaType;
+  pageConfig?: PageMetaType;
 }) => {
   const { lang } = useTranslation();
-  const locale = lang as 'en' | 'de'; // Recast for TypeScript autocomplete
-
-  let shareImages = pageConfig?.[locale]?.shareGraphics
-    ? buildOpenGraphImages(pageConfig?.[locale].shareGraphics)
+  let shareImages = pageConfig?.shareGraphics
+    ? buildOpenGraphImages(pageConfig?.shareGraphics)
     : [];
 
   if (shareImages.length === 0) {
-    shareImages = siteConfig?.meta?.[locale]?.shareGraphics
-      ? buildOpenGraphImages(siteConfig.meta?.[locale].shareGraphics)
+    shareImages = siteConfig?.meta?.shareGraphics
+      ? buildOpenGraphImages(siteConfig.meta?.shareGraphics)
       : [];
   }
 
   const merged = {
-    title:
-      pageConfig?.[locale]?.metaTitle ?? siteConfig?.meta?.[locale]?.metaTitle,
+    title: pageConfig?.metaTitle ?? siteConfig?.meta?.metaTitle,
     description:
-      pageConfig?.[locale]?.metaDescription ??
-      siteConfig?.meta?.[locale]?.metaDescription,
+      pageConfig?.metaDescription ?? siteConfig?.meta?.metaDescription,
     openGraph: {
       type: 'website',
-      locale,
-      url: siteConfig?.siteUrl?.[locale],
-      site_name: siteConfig?.siteName?.[locale],
+      lang,
+      url: siteConfig?.siteUrl,
+      site_name: siteConfig?.siteName,
       images: shareImages,
     },
     twitter: {
       cardType:
-        pageConfig?.[locale]?.twitterCardType ??
-        siteConfig?.meta?.[locale]?.twitterCardType ??
+        pageConfig?.twitterCardType ??
+        siteConfig?.meta?.twitterCardType ??
         'summary_large_image',
     },
   };
+
+  if (siteConfig?.titleTemplate?.includes('%s')) {
+    merged.title = siteConfig.titleTemplate.replace('%s', merged.title ?? '');
+  }
 
   return (
     <>
@@ -72,9 +87,9 @@ const MetaConfig = ({
   );
 };
 
-MetaConfig.defaultProps = {
+Meta.defaultProps = {
   pageConfig: null,
   siteConfig: null,
 };
 
-export default MetaConfig;
+export default Meta;
